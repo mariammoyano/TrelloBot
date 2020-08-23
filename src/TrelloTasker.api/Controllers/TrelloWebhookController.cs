@@ -29,6 +29,7 @@ namespace TrelloTasker.api.Controllers
             // {
             //     throw new NotImplementedException();
             // }
+            logger.LogInformation("test", Request);
             return new OkObjectResult(trelloWebhookDTO);
         }
     }
