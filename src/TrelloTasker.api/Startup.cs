@@ -39,8 +39,9 @@ namespace TrelloTasker.api
 
             app.UseSwagger();
 
-            app.UseSwaggerUI(c => {
-                c.SwaggerEndpoint("/swager/v1/swagger.json", "My API V1");
+            app.UseSwaggerUI(c => 
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
             });
 
             app.UseHttpsRedirection();
