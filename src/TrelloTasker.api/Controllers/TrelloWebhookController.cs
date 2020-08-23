@@ -24,7 +24,7 @@ namespace TrelloTasker.api.Controllers
         public async Task<IActionResult> OnWebhookCallback(TrelloWebHookDTO trelloWebhookDTO)
         {
             logger.LogInformation(Request.Body.ToString(), Request);
-
+            
             if (trelloWebhookDTO.action.data.card.name.EndsWith("Bi-daily"))
             {
                 throw new NotImplementedException();
