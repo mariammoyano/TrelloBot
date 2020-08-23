@@ -3,9 +3,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TrelloTasker.Model\TrelloTasker.Model.csproj"/>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.5.1" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.5.1"/>
+    <ProjectReference Include="..\TrelloTasker.Model\TrelloTasker.Model.csproj" />
   </ItemGroup>
 </Project>

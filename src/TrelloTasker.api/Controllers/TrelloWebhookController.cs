@@ -20,15 +20,15 @@ namespace TrelloTasker.api.Controllers
             this.logger = logger;
         }
     
-        [HttpPost]
+        [HttpPost()]
         public async Task<IActionResult> OnWebhookCallback(TrelloWebHookDTO trelloWebhookDTO)
         {
             logger.LogInformation(Request.Body.ToString(), Request);
 
-            if (trelloWebhookDTO.action.data.card.name.EndsWith("Bi-daily"))
-            {
-                throw new NotImplementedException();
-            }
+            // if (trelloWebhookDTO.action.data.card.name.EndsWith("Bi-daily"))
+            // {
+            //     throw new NotImplementedException();
+            // }
             return new OkObjectResult(trelloWebhookDTO);
         }
     }
